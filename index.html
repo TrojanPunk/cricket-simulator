@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <script src="index.js" defer=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <div id="root" class="container text-center">
+        <p>Cricket 10</p>
+        <div class="row">
+            <div class="col-4">
+                <h3 class="team1-heading">TEAM 1 SCORE</h3>
+                <h2 id="team1-score">0</h2><button disabled="" id="team1" class="btn btn-primary"
+                    onclick="team1.makeRuns()">HIT</button>
+            </div>
+            <div class="col-4">
+                <h3>TIMER</h3>
+                <h1 id="timer">60</h1><button id="start" class="btn btn-primary">START</button>
+            </div>
+            <div class="col-4">
+                <h3 class="team2-heading">TEAM 2 SCORE</h3>
+                <h2 id="team2-score">0</h2><button disabled="" id="team2" class="btn btn-primary"
+                    onclick="team2.makeRuns()">HIT</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6" id="team1-table">
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>Team 1</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Player 1</th>
+                            <td id="team111"></td>
+                            <td id="team112"></td>
+                            <td id="team113"></td>
+                            <td id="team114"></td>
+                            <td id="team115"></td>
+                            <td id="team116"></td>
+                            <td id="team117"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 2</th>
+                            <td id="team121"></td>
+                            <td id="team122"></td>
+                            <td id="team123"></td>
+                            <td id="team124"></td>
+                            <td id="team125"></td>
+                            <td id="team126"></td>
+                            <td id="team127"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 3</th>
+                            <td id="team131"></td>
+                            <td id="team132"></td>
+                            <td id="team133"></td>
+                            <td id="team134"></td>
+                            <td id="team135"></td>
+                            <td id="team136"></td>
+                            <td id="team137"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 4</th>
+                            <td id="team141"></td>
+                            <td id="team142"></td>
+                            <td id="team143"></td>
+                            <td id="team144"></td>
+                            <td id="team145"></td>
+                            <td id="team146"></td>
+                            <td id="team147"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 5</th>
+                            <td id="team151"></td>
+                            <td id="team152"></td>
+                            <td id="team153"></td>
+                            <td id="team154"></td>
+                            <td id="team155"></td>
+                            <td id="team156"></td>
+                            <td id="team157"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 6</th>
+                            <td id="team161"></td>
+                            <td id="team162"></td>
+                            <td id="team163"></td>
+                            <td id="team164"></td>
+                            <td id="team165"></td>
+                            <td id="team166"></td>
+                            <td id="team167"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 7</th>
+                            <td id="team171"></td>
+                            <td id="team172"></td>
+                            <td id="team173"></td>
+                            <td id="team174"></td>
+                            <td id="team175"></td>
+                            <td id="team176"></td>
+                            <td id="team177"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 8</th>
+                            <td id="team181"></td>
+                            <td id="team182"></td>
+                            <td id="team183"></td>
+                            <td id="team184"></td>
+                            <td id="team185"></td>
+                            <td id="team186"></td>
+                            <td id="team187"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 9</th>
+                            <td id="team191"></td>
+                            <td id="team192"></td>
+                            <td id="team193"></td>
+                            <td id="team194"></td>
+                            <td id="team195"></td>
+                            <td id="team196"></td>
+                            <td id="team197"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 10</th>
+                            <td id="team1101"></td>
+                            <td id="team1102"></td>
+                            <td id="team1103"></td>
+                            <td id="team1104"></td>
+                            <td id="team1105"></td>
+                            <td id="team1106"></td>
+                            <td id="team1107"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6" id="team2-table">
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <th>Team 2</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Player 1</th>
+                            <td id="team211"></td>
+                            <td id="team212"></td>
+                            <td id="team213"></td>
+                            <td id="team214"></td>
+                            <td id="team215"></td>
+                            <td id="team216"></td>
+                            <td id="team217"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 2</th>
+                            <td id="team221"></td>
+                            <td id="team222"></td>
+                            <td id="team223"></td>
+                            <td id="team224"></td>
+                            <td id="team225"></td>
+                            <td id="team226"></td>
+                            <td id="team227"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 3</th>
+                            <td id="team231"></td>
+                            <td id="team232"></td>
+                            <td id="team233"></td>
+                            <td id="team234"></td>
+                            <td id="team235"></td>
+                            <td id="team236"></td>
+                            <td id="team237"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 4</th>
+                            <td id="team241"></td>
+                            <td id="team242"></td>
+                            <td id="team243"></td>
+                            <td id="team244"></td>
+                            <td id="team245"></td>
+                            <td id="team246"></td>
+                            <td id="team247"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 5</th>
+                            <td id="team251"></td>
+                            <td id="team252"></td>
+                            <td id="team253"></td>
+                            <td id="team254"></td>
+                            <td id="team255"></td>
+                            <td id="team256"></td>
+                            <td id="team257"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 6</th>
+                            <td id="team261"></td>
+                            <td id="team262"></td>
+                            <td id="team263"></td>
+                            <td id="team264"></td>
+                            <td id="team265"></td>
+                            <td id="team266"></td>
+                            <td id="team267"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 7</th>
+                            <td id="team271"></td>
+                            <td id="team272"></td>
+                            <td id="team273"></td>
+                            <td id="team274"></td>
+                            <td id="team275"></td>
+                            <td id="team276"></td>
+                            <td id="team277"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 8</th>
+                            <td id="team281"></td>
+                            <td id="team282"></td>
+                            <td id="team283"></td>
+                            <td id="team284"></td>
+                            <td id="team285"></td>
+                            <td id="team286"></td>
+                            <td id="team287"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 9</th>
+                            <td id="team291"></td>
+                            <td id="team292"></td>
+                            <td id="team293"></td>
+                            <td id="team294"></td>
+                            <td id="team295"></td>
+                            <td id="team296"></td>
+                            <td id="team297"></td>
+                        </tr>
+                        <tr>
+                            <th>Player 10</th>
+                            <td id="team2101"></td>
+                            <td id="team2102"></td>
+                            <td id="team2103"></td>
+                            <td id="team2104"></td>
+                            <td id="team2105"></td>
+                            <td id="team2106"></td>
+                            <td id="team2107"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3"><button disabled="" id="result" class="btn btn-primary"
+                    onclick="team1.result(team1, team2)">GENERATE RESULT</button></div>
+        </div>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <h2 id="resultArea"></h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
